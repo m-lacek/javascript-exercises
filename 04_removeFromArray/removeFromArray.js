@@ -9,6 +9,5 @@ const removeFromArray = function (array, ...args) {
     return array
 }
 
-// Can use Array.from(arguments) to create an array with the arguments. then just start it at 1?
 // Do not edit below this line
 module.exports = removeFromArray;
