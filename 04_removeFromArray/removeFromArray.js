@@ -1,11 +1,14 @@
 const removeFromArray = function (array, ...args) {
-    for (let i = 0; i < array.length - 1; i++) {
-        if (array[i] == args) {
-            array.splice(i, 1);
+    let inputs = Array.from(arguments)
+    for (let i = 1; i < inputs.length; i++) {
+        let index = array.indexOf(inputs[i]);
+        if (index > -1) {
+            array.splice(index, 1);
         }
     }
     return array
-};
+}
 
+// Can use Array.from(arguments) to create an array with the arguments. then just start it at 1?
 // Do not edit below this line
 module.exports = removeFromArray;
